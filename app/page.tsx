@@ -48,13 +48,12 @@ const filetToBase64 = (file: File) => {
 };
 
 const HTMLExample = `
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUDITECHME</title>
+    <title>Selection Controls</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
     <style>
         body {
@@ -62,64 +61,67 @@ const HTMLExample = `
         }
     </style>
 </head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
-<body class="bg-white">
-    <!-- Navigation -->
-    <nav class="mx-auto py-8 px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div class="w-full flex items-center justify-between border-b border-gray-200 lg:border-none">
-            <div class="flex items-center">
-                <a href="#">
-                    <span class="sr-only">AUDITECHME</span>
-                    <img class="h-8 w-auto sm:h-10" src="https://placehold.co/200x50/red/transparent.png" alt="AUDITECHME Logo">
-                </a>
-            </div>
-            <div class="ml-10 space-x-4">
-                <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
-                <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Servizi</a>
-                <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Catalogo</a>
-                <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Contattaci</a>
-                <a href="#" class="inline-block bg-red-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">
-                    <i class="fas fa-lock"></i> AREA RISERVATA
-                </a>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Hero Section -->
-    <div class="relative bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-                    <div class="sm:text-center lg:text-left">
-                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                            <span class="block xl:inline">Molto più di un</span>
-                            <span class="block text-red-600 xl:inline">AUDIT!</span>
-                        </h1>
-                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                            Se cerchi un servizio innovativo di osservazione e analisi indipendente, oggettiva, documentata, che ti supporti nei processi decisionali e incrementi la consapevolezza del tuo gruppo di lavoro, AUDITECHME è la risposta per te!
-                        </p>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                            <div class="rounded-md shadow">
-                                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10">
-                                    <i class="fas fa-euro-sign"></i> ACQUISTA
-                                </a>
-                            </div>
-                            <div class="mt-3 sm:mt-0 sm:ml-3">
-                                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 md:py-4 md:text-lg md:px-10">
-                                    <i class="fas fa-envelope"></i> CONTATTA
-                                </a>
-                            </div>
-                        </div>
+<div class="px-8 py-12">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-semibold mb-8">Selection controls</h2>
+
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Types</h3>
+            <div class="grid grid-cols-3 gap-6">
+                
+                <div class="p-6 shadow-lg rounded-lg bg-white flex flex-col items-center">
+                    <div class="mb-2">
+                        <i class="text-3xl text-blue-600 far fa-check-circle"></i>
+                        <i class="text-3xl text-gray-400 far fa-square"></i>
                     </div>
-                </main>
+                    <p class="mt-2 text-sm font-semibold">Checkboxes</p>
+                </div>
+                
+                <div class="p-6 shadow-lg rounded-lg bg-white flex flex-col items-center">
+                    <div class="mb-2">
+                        <i class="text-3xl text-blue-600 fas fa-dot-circle"></i>
+                        <i class="text-3xl text-gray-400 far fa-circle"></i>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Radio buttons</p>
+                </div>
+                
+                <div class="p-6 shadow-lg rounded-lg bg-white flex flex-col items-center">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <p class="mt-2 text-sm font-semibold">Toggle-Switch</p>
+                </div>
+                
             </div>
         </div>
-        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://placehold.co/800x600/e2e8f0/ffffff?text=A+person+surrounded+by+documents+and+graphs" alt="A person surrounded by documents and graphs, representing analytics and data interpretation.">
+        
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Choice chips</h3>
+            <div class="flex">
+                <a href="#" class="mr-2 px-4 py-2 bg-blue-500 text-white rounded-full shadow">Colors</a>
+                <a href="#" class="mr-2 px-4 py-2 bg-gray-200 text-gray-600 rounded-full shadow">Shapes</a>
+                <a href="#" class="mr-2 px-4 py-2 bg-gray-200 text-gray-600 rounded-full shadow">Textures</a>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Multi-select chips</h3>
+            <div class="flex">
+                <a href="#" class="mr-2 px-4 py-2 bg-gray-200 text-gray-600 rounded-full shadow">silver</a>
+                <a href="#" class="mr-2 px-4 py-2 bg-gray-200 text-gray-600 rounded-full shadow">blue</a>
+                <a href="#" class="mr-2 px-4 py-2 bg-blue-500 text-white rounded-full shadow"><i class="far fa-check-circle mr-1"></i>fuchsia</a>
+                <a href="#" class="mr-2 px-4 py-2 bg-blue-500 text-white rounded-full shadow">purple</a>
+                <a href="#" class="mr-2 px-4 py-2 bg-gray-200 text-gray-600 rounded-full shadow">black</a>
+                <a href="#" class="mr-2 px-4 py-2 bg-gray-200 text-gray-600 rounded-full shadow">yellow</a>
+            </div>
         </div>
     </div>
-</body>
+</div>
 
+</body>
 </html>
 `;
 
@@ -180,10 +182,10 @@ export default function Home() {
 	};
 
 	return (
-		<div className="from-primary-200 grid grid-cols-[350px_1fr] bg-gradient-to-t via-neutral-50 to-slate-300 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700">
+		<div className="grid grid-cols-[350px_1fr] bg-gradient-to-t from-primary-200 via-neutral-50 to-slate-300 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700">
 			<Aside imagePreviewSource={imagePreviewSource} />
-			<main className="dark:bg-primary-950 mx-auto flex min-h-screen w-full max-w-7xl flex-col  p-8">
-				<h1 className="text-primary-900 my-12 text-center text-5xl font-extrabold uppercase">
+			<main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col p-8  dark:bg-primary-950">
+				<h1 className="my-12 text-center text-5xl font-extrabold uppercase text-primary-900">
 					Generate code from image
 				</h1>
 				{step === STEPS.INITIAL && (
