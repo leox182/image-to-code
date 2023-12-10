@@ -37,6 +37,8 @@ npm run dev or pnpm run dev
 2. Accede a la aplicación en tu navegador: http://localhost:3000
 3. Sube una imagen que contenga elementos de UI o pega una URL y espera a que la magia suceda.
 
+![Image to code](https://github.com/leox182/image-to-code/assets/64720826/20dceb1f-9962-4740-9384-3513cbe64691)
+
 ## Recomendaciones
 1. La generación de codigo funciona mejor usando la combinación de HTML vanilla + Tailwindcss (por defecto)
 2. Funciona mejor generando componentes especificos, por ejemplo un boton y sus variantes
