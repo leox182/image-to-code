@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Generador de Código desde Imágenes con Next.js y OpenAI GPT-4 Vision
+Este proyecto utiliza Next.js para construir una aplicación web que genera código fuente a partir de imágenes utilizando la API de OpenAI con el nuevo modelo GPT-4 Vision. Está inspirado en el proyecto de código abierto ["screenshot-to-code"](https://github.com/abi/screenshot-to-code).
 
-## Getting Started
+![image-to-code-hero-02-mockup](https://github.com/leox182/image-to-code/assets/64720826/4433e70b-ab47-4d15-9666-df922c50db87)
 
-First, run the development server:
+## Características
+Generación de Código desde Imágenes en local o desde una URL: Utiliza el poder del modelo GPT-4 Vision de OpenAI para transformar imágenes de código en texto funcional.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Interfaz de Usuario Intuitiva: Desarrollado con Next.js, la aplicación proporciona una interfaz de usuario fácil de usar para cargar imágenes y obtener resultados de código.
+
+## Instalación
+1. Clona el repositorio:
+```
+git clone https://github.com/leox182/image-to-code.git
+cd image-to-code
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install or pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Configura las variables de entorno:
+Crea un archivo .env.local en la raíz del proyecto y agrega tu clave de API de OpenAI:
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+```
+OPENAI_API_KEY=[AQUI_TU_API_KEY]
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Uso
+1. Inicia la aplicación:
+```
+npm run dev or pnpm run dev
+```
+2. Accede a la aplicación en tu navegador: http://localhost:3000
+3. Sube una imagen que contenga elementos de UI o pega una URL y espera a que la magia suceda.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Image to code](https://github.com/leox182/image-to-code/assets/64720826/20dceb1f-9962-4740-9384-3513cbe64691)
 
-## Deploy on Vercel
+## Recomendaciones
+1. La generación de codigo funciona mejor usando la combinación de HTML vanilla + Tailwindcss (por defecto)
+2. Funciona mejor generando componentes especificos, por ejemplo un boton y sus variantes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contribuciones
+¡Las contribuciones son bienvenidas! Si encuentras algún problema o tienes una mejora, por favor crea un problema o envía una solicitud de extracción.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Agradecimientos
+Este proyecto se basa en el trabajo del proyecto de código abierto ["screenshot-to-code"](https://github.com/abi/screenshot-to-code). Agradecemos a la comunidad por sus contribuciones.
+
+## Licencia
+Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE.md para obtener más detalles.
