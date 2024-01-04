@@ -149,7 +149,7 @@ export default function Home() {
 
 		if (!res.ok || res.body == null) {
 			setStep(STEPS.ERROR);
-			throw new Error('Error al generar el código');
+			throw new Error('Error when generating the code');
 		}
 
 		setStep(STEPS.PREVIEW);
@@ -172,10 +172,10 @@ export default function Home() {
 		navigator.clipboard
 			.writeText(result)
 			.then(() => {
-				alert(`Texto copiado al portapapeles`);
+				alert(`Code copied to clipboard`);
 			})
 			.catch((err) => {
-				console.error('Error al copiar al portapapeles', err);
+				console.error('Error copying code', err);
 			});
 	};
 
@@ -203,9 +203,9 @@ export default function Home() {
 					<section className="mx-auto flex w-full flex-1 flex-col gap-8 md:w-1/2">
 						<span className="text-center text-2xl font-bold">Ups! Something has gone wrong</span>
 						<div className="mx-auto overflow-hidden rounded-lg">
-							<img src="/assets/mr-incredible.webp" className="aspect-square object-cover" />
+							<img src="/assets/mr-incredible.webp" className="aspect-square object-cover" alt='mr incredible' />
 						</div>
-						<Button onClick={() => setStep(STEPS.INITIAL)}>Vuele a inicio</Button>
+						<Button onClick={() => setStep(STEPS.INITIAL)}>Home</Button>
 					</section>
 				)}
 
